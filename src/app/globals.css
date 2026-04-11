@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #07070e;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Waveform bars — CSS-driven for performance */
+.wave-bar {
+  width: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(to top, #6366f1, #a78bfa);
+  animation: waveBar var(--bar-dur, 1.6s) ease-in-out infinite var(--bar-delay, 0s);
+  height: 4px;
+}
+
+@keyframes waveBar {
+  0%,
+  100% {
+    height: 4px;
+    opacity: 0.35;
+  }
+  50% {
+    height: var(--bar-h, 28px);
+    opacity: 1;
+  }
+}
+
+/* Smooth scroll section anchors */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+}
