@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
+        <Link href="/creator" className="flex items-center gap-2 group">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center shadow-lg shadow-brand-primary/30">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <rect x="1" y="6" width="2" height="6" rx="1" fill="white" opacity="0.7" />
@@ -31,10 +32,13 @@ export default function Navbar() {
               <rect x="13" y="6" width="1" height="5" rx="0.5" fill="white" opacity="0.7" />
             </svg>
           </div>
-          <span className="text-white font-semibold tracking-tight text-[15px]">
-            MoonWav
+          <span
+            className="text-white font-semibold italic text-[15px]"
+            style={{ fontFamily: "Georgia, serif" }}
+          >
+            moonwav
           </span>
-        </a>
+        </Link>
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -55,10 +59,10 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="#download"
+          href="#creators"
           className="text-sm font-medium px-4 py-2 rounded-full bg-brand-primary hover:bg-brand-light transition-colors text-white shadow-lg shadow-brand-primary/25"
         >
-          Get the app
+          Apply for access
         </a>
       </nav>
     </header>

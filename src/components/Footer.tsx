@@ -15,7 +15,12 @@ export default function Footer() {
                   <rect x="13" y="6" width="1" height="5" rx="0.5" fill="white" opacity="0.7" />
                 </svg>
               </div>
-              <span className="text-white font-semibold text-[15px]">MoonWav</span>
+              <span
+                className="text-white font-semibold italic text-[15px]"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                moonwav
+              </span>
             </div>
             <p className="text-brand-subtle text-sm">Short-Form Audio, Personalized to Your Day</p>
           </div>
@@ -27,11 +32,23 @@ export default function Footer() {
                 {link}
               </a>
             ))}
+            <a
+              href="/api/logout"
+              className="hover:text-white transition-colors"
+            >
+              Sign out
+            </a>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-brand-border flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-brand-muted">
-          <p>© {new Date().getFullYear()} MoonWav. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()}{" "}
+            <span className="italic" style={{ fontFamily: "Georgia, serif" }}>
+              moonwav
+            </span>
+            . Closed preview.
+          </p>
           <p>moonwav.ai</p>
         </div>
       </div>

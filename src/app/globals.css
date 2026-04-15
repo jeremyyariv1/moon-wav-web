@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #07070e;
+  background-color: #050508;
   color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,7 +21,7 @@ body {
 .wave-bar {
   width: 3px;
   border-radius: 9999px;
-  background: linear-gradient(to top, #6366f1, #a78bfa);
+  background: linear-gradient(to top, #8c4df2, #ccb3ff);
   animation: waveBar var(--bar-dur, 1.6s) ease-in-out infinite var(--bar-delay, 0s);
   height: 4px;
 }
@@ -45,5 +45,5 @@ section {
 
 /* Selection color */
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(140, 77, 242, 0.35);
 }
