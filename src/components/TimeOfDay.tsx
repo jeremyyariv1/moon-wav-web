@@ -76,7 +76,11 @@ export default function TimeOfDay() {
             </span>
           </h2>
           <p className="text-brand-subtle text-base mt-4 max-w-md mx-auto">
-            Different content at different hours. MoonWav knows what you need before you do.
+            Different content at different hours.{" "}
+            <span className="italic" style={{ fontFamily: "Georgia, serif" }}>
+              moonwav
+            </span>{" "}
+            knows what you need before you do.
           </p>
         </motion.div>
 

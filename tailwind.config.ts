@@ -10,13 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          bg: "#07070e",
-          surface: "#0d0d1f",
-          card: "#111127",
-          border: "#1e1e3f",
-          primary: "#6366f1",
-          light: "#818cf8",
-          accent: "#a78bfa",
+          bg: "#050508",
+          surface: "#0d0b2e",
+          card: "#140f4d",
+          border: "#26197f",
+          primary: "#8c4df2",
+          light: "#a673ff",
+          accent: "#ccb3ff",
           muted: "#475569",
           subtle: "#94a3b8",
         },
@@ -26,9 +26,9 @@ const config: Config = {
       },
       backgroundImage: {
         "hero-glow":
-          "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(99,102,241,0.22) 0%, transparent 65%)",
+          "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(140,77,242,0.22) 0%, transparent 65%)",
         "card-shine":
-          "linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(167,139,250,0.04) 100%)",
+          "linear-gradient(135deg, rgba(140,77,242,0.1) 0%, rgba(204,179,255,0.04) 100%)",
       },
       keyframes: {
         waveBar: {
@@ -40,8 +40,8 @@ const config: Config = {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 24px rgba(99,102,241,0.15)" },
-          "50%": { boxShadow: "0 0 48px rgba(99,102,241,0.35)" },
+          "0%, 100%": { boxShadow: "0 0 24px rgba(140,77,242,0.15)" },
+          "50%": { boxShadow: "0 0 48px rgba(140,77,242,0.35)" },
         },
       },
       animation: {

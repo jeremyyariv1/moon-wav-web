@@ -1,25 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import HowItWorks from "@/components/HowItWorks";
-import Features from "@/components/Features";
-import TimeOfDay from "@/components/TimeOfDay";
-import CreatorSection from "@/components/CreatorSection";
-import Footer from "@/components/Footer";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { AUTH_COOKIE, parseToken } from "@/lib/auth";
+import LockedLanding from "@/components/LockedLanding";
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Stats />
-        <HowItWorks />
-        <Features />
-        <TimeOfDay />
-        <CreatorSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function Home() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get(AUTH_COOKIE)?.value;
+  const role = await parseToken(token);
+  if (role === "investor") redirect("/investor");
+  if (role === "creator") redirect("/creator");
+  return <LockedLanding />;
 }
