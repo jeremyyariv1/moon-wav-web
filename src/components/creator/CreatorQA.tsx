@@ -7,31 +7,31 @@ import SectionTag from "@/components/shared/SectionTag";
 const QUESTIONS = [
   {
     q: "Won't this cannibalize my downloads?",
-    a: "No. The clip lives on moonwav; the episode lives wherever you publish. Dive Deeper drives listeners back to your distribution — Apple, Spotify, your RSS — where the download still counts. Top-of-funnel layer, not a replacement.",
+    a: "The clip lives on moonwav; the full episode stays on your platform. Dive Deeper sends listeners back to your distribution.",
   },
   {
     q: "Do I have to make new content?",
-    a: "No. Pull 90 seconds from an episode you've already shipped. Treat it like the trailer you wish more people saw — same workflow as a social cut, one less platform tax.",
+    a: "Pull 90 seconds from an episode you already shipped. Same workflow as a social cut.",
   },
   {
     q: "What if my existing audience doesn't use moonwav?",
-    a: "They don't have to. moonwav is for the listeners you don't have yet. You're acquiring net-new ears, not migrating old ones.",
+    a: "moonwav is for listeners you don't have yet. Net-new ears, not migration.",
   },
   {
     q: "I've tried clip apps before — Snipd, Headliner, Descript. Why is this different?",
-    a: "Snipd, Headliner, Descript help you *make* clips. They don't distribute them. A clip in Headliner has the same problem your show does — nobody sees it unless you post it somewhere. moonwav is the distribution side: you drop the clip, the algorithm puts it in front of cold ears.",
+    a: "Snipd and Headliner help you make clips. They don't distribute them. We're the distribution.",
   },
   {
     q: "Why would 90 seconds work for what I do? My show is long-form for a reason.",
-    a: "The clip isn't your art. It's the trailer. 90 seconds has one job: get someone curious enough to tap Dive Deeper. The episode is the meal. Long-form depth is exactly what we drive listeners back to.",
+    a: "The clip is the preview, not the show. The episode is the payoff — long-form depth is what we drive listeners back to.",
   },
   {
     q: "What stops moonwav from changing the rules later — like Spotify and exclusives?",
-    a: "Two structural answers. First: the listener never leaves your distribution — Dive Deeper opens your episode in their app of choice, on your RSS. We don't own your show; you do. Second: our only leverage is the discovery surface, and we're built to share economics by design — not as a revocable favor.",
+    a: "The listener never leaves your distribution. We don't own your show; you do.",
   },
   {
     q: "How do I know the algorithm will treat my work fairly?",
-    a: "It optimizes for one thing: did this clip earn the listener's attention. No follower-count weighting, no chart bias, no editorial curation. If your clip lands better than someone else's, you get more reach. If it doesn't, no brand recognition will save it. That's the fair version.",
+    a: "It optimizes for one thing: did the clip earn attention. No follower weighting, no chart bias, no editorial picks.",
   },
 ];
 

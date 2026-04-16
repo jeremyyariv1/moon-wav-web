@@ -3,9 +3,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionTag from "@/components/shared/SectionTag";
+import FunnelShape from "@/components/shared/FunnelShape";
 
 const STAGES = [
-  { label: "Cold ear", note: "A listener who has never heard of you" },
+  { label: "Cold listener", note: "Someone who has never heard of you" },
   { label: "Skip / like", note: "First signal — does the clip land?" },
   { label: "Dive Deeper", note: "Strongest intent — they want the full thing" },
   { label: "Full episode", note: "Opens in their podcast app of choice" },
@@ -34,7 +35,7 @@ export default function Funnel() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white mb-10"
         >
-          From cold ear to subscriber on{" "}
+          From cold listener to subscriber on{" "}
           <span className="text-brand-light">your</span> platform.
         </motion.h2>
 
@@ -49,31 +50,13 @@ export default function Funnel() {
           subscribe.
         </motion.p>
 
-        <div className="space-y-3">
-          {STAGES.map(({ label, note }, i) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, x: -16 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
-              className="rounded-xl border border-brand-border bg-brand-card/40 px-5 py-4 flex items-center gap-5"
-            >
-              <span
-                className="text-xs italic text-brand-light w-8 shrink-0"
-                style={{ fontFamily: "Georgia, serif" }}
-              >
-                0{i + 1}
-              </span>
-              <span className="text-white font-semibold w-36 shrink-0">{label}</span>
-              <span className="text-brand-subtle text-sm leading-relaxed flex-1">
-                {note}
-              </span>
-              {i < STAGES.length - 1 && (
-                <span className="text-brand-primary shrink-0 hidden md:inline">↓</span>
-              )}
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <FunnelShape stages={STAGES as [typeof STAGES[0], typeof STAGES[0], typeof STAGES[0], typeof STAGES[0], typeof STAGES[0]]} />
+        </motion.div>
       </div>
     </section>
   );

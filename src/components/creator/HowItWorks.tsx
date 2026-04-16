@@ -8,12 +8,12 @@ const STEPS = [
   {
     n: "01",
     title: "Drop a clip",
-    desc: "Pull 60–90 seconds from an episode you already shipped — the best moment, the spiciest take, the part trailers always lead with. No new content needed.",
+    desc: "Pull 60–90 seconds from an episode you already shipped — the sharpest moment, the part a trailer would lead with. No new content needed.",
   },
   {
     n: "02",
     title: "The algorithm finds the right ears",
-    desc: "Cold listeners hear it in their feed — ranked by what they actually like, not by your follower count or chart position. Performance is what compounds.",
+    desc: "Listeners who don't follow you hear it in their feed — ranked by what they respond to, not by your follower count or chart position. Performance compounds.",
   },
   {
     n: "03",

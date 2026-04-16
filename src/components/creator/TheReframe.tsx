@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionTag from "@/components/shared/SectionTag";
+import LayerAbove from "@/components/shared/LayerAbove";
 
 export default function TheReframe() {
   const ref = useRef(null);
@@ -40,28 +41,33 @@ export default function TheReframe() {
           className="space-y-5 text-lg text-brand-subtle leading-relaxed max-w-2xl"
         >
           <p>
-            We&apos;re not asking you or your listeners to switch apps. moonwav
-            runs <em>above</em> your existing show, in your existing distribution.
-          </p>
-          <p>
             You upload one 90-second clip from an episode you already shipped.
-            Our algorithm finds cold ears most likely to like it. The ones who tap{" "}
-            <span className="text-white font-semibold">Dive Deeper</span> land on
-            your full episode in Apple, Spotify, your RSS — and you gain a
-            subscriber where you&apos;ve always counted them. We don&apos;t own
-            your show; we own the discovery surface above it.
+            The algorithm finds listeners most likely to respond. The ones who
+            tap{" "}
+            <span className="text-white font-semibold">Dive Deeper</span> land
+            on your full episode in Apple, Spotify, your RSS. We don&apos;t own
+            your show — we own the discovery surface above it.
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mt-14"
+        >
+          <LayerAbove />
         </motion.div>
 
         <motion.blockquote
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-14 pl-6 border-l-2 border-brand-primary text-2xl md:text-3xl italic text-white leading-snug max-w-2xl font-bold"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          &ldquo;Give us your best 90 seconds. We&apos;ll find you listeners who
-          didn&apos;t know they needed you.&rdquo;
+          &ldquo;Give us 90 seconds. We&apos;ll put it in front of people
+          who&apos;ve never heard of you.&rdquo;
         </motion.blockquote>
       </div>
     </section>

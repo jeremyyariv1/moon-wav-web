@@ -36,12 +36,10 @@ export default function Worldview() {
           className="text-lg text-brand-subtle leading-relaxed max-w-2xl"
         >
           <p>
-            The habit accumulates the data. As foundation models commoditize,
-            the marginal cost of any given software feature collapses toward
-            zero — by 2027, anyone well-funded can replicate the surface of any
-            consumer AI app in a weekend. What they can&apos;t replicate is
-            years of granular behavioral data on how real humans actually use
-            it.
+            The habit accumulates the data. As models commoditize, the cost of
+            any software feature collapses toward zero. What can&apos;t be
+            replicated is years of behavioral data on how real humans actually
+            use the product.
           </p>
         </motion.div>
 
@@ -52,8 +50,8 @@ export default function Worldview() {
           className="mt-14 pl-6 border-l-2 border-brand-primary text-2xl md:text-3xl italic text-white leading-snug max-w-2xl"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          In a world where software is free, the only durable asset is the behavioral
-          dataset that nobody else has and nobody else can buy.
+          When software is free, the only durable asset is the behavioral dataset
+          that nobody else has and nobody else can buy.
         </motion.blockquote>
       </div>
     </section>

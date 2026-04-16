@@ -3,25 +3,26 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionTag from "@/components/shared/SectionTag";
+import StageArc from "@/components/shared/StageArc";
 
 const STAGES = [
   {
     label: "Wedge",
     status: "Today",
     headline: "Personalized short-form audio feed.",
-    body: "Earn daily ear time with the simplest possible content product. Every interaction becomes context-conditioned preference data — the asset nobody else is accumulating.",
+    body: "Earn daily ear time. Every interaction becomes preference data nobody else is accumulating.",
   },
   {
     label: "Bridge",
     status: "Next",
     headline: "Briefings extend the feed into assistant territory.",
-    body: "Calendar, email, important messages synthesized into the same audio stream. Same UX. Broader scope. The handoff from content data to assistant data is structural, not a pivot.",
+    body: "Calendar, email, messages synthesized into the feed. Same UX. The handoff from content data to assistant data.",
   },
   {
     label: "Companion",
-    status: "The destination",
+    status: "Destination",
     headline: "The ambient AI in your ear.",
-    body: "Push-based, context-aware, always present. Powered by years of behavioral data no foundation model can cold-start from. The hardware ships from Apple, OpenAI, and Meta — we run on all of it.",
+    body: "Push-based, context-aware, always present. Powered by behavioral data no model can cold-start.",
   },
 ];
 
@@ -70,9 +71,25 @@ export default function Plan() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg text-brand-subtle leading-relaxed max-w-2xl mb-16"
         >
-          Each stage stands on its own as a venture-scale product. Each stage
-          builds the data substrate the next one requires.
+          Each stage is a standalone business. Each stage builds the data the
+          next one needs.
         </motion.p>
+
+        {/* Arc: visual progression */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          className="mb-16"
+        >
+          <StageArc
+            stages={[
+              { label: "Wedge", status: "Today" },
+              { label: "Bridge", status: "Next" },
+              { label: "Companion", status: "Destination" },
+            ]}
+          />
+        </motion.div>
 
         {/* Three stages */}
         <div className="grid md:grid-cols-3 gap-5 mb-20">
@@ -81,7 +98,7 @@ export default function Plan() {
               key={label}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
               className="rounded-2xl border border-brand-border bg-brand-card/50 p-7 flex flex-col gap-3"
             >
               <div className="flex items-baseline justify-between">
@@ -144,8 +161,7 @@ export default function Plan() {
           className="mt-16 pl-6 border-l-2 border-brand-primary text-2xl md:text-3xl italic text-white leading-snug max-w-2xl"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          The wedge stands on its own. The companion is the upside. We built the
-          first so we earn the right to the second.
+          The wedge is a real business. The companion is the upside.
         </motion.blockquote>
       </div>
     </section>

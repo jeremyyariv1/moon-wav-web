@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionTag from "@/components/shared/SectionTag";
+import FlywheelDiagram from "@/components/shared/FlywheelDiagram";
 
 export default function OneLayerUp() {
   const ref = useRef(null);
@@ -29,7 +30,7 @@ export default function OneLayerUp() {
           The app is not the product.
           <br />
           <span className="text-brand-light">
-            The app is the data-collection apparatus.
+            The app is the instrument.
           </span>
         </motion.h2>
 
@@ -39,16 +40,15 @@ export default function OneLayerUp() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="space-y-5 text-lg text-brand-subtle leading-relaxed max-w-2xl"
         >
-          <p>Every design decision is evaluated against a single question:</p>
           <p
-            className="italic text-xl text-white"
+            className="italic text-xl md:text-2xl text-white"
             style={{ fontFamily: "Georgia, serif" }}
           >
             Does this generate higher-quality preference signal per user-minute?
           </p>
           <p>
-            The feed earns ear time. The ear time accumulates the dataset. The
-            dataset unlocks the companion.
+            The feed earns ear time. Ear time accumulates the dataset. The
+            dataset makes the companion real.
           </p>
         </motion.div>
 
@@ -56,32 +56,18 @@ export default function OneLayerUp() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-14 rounded-2xl border border-brand-primary/30 bg-gradient-to-br from-brand-primary/10 to-brand-accent/5 p-8"
+          className="mt-16 rounded-3xl border border-brand-primary/20 bg-gradient-to-br from-brand-primary/5 via-transparent to-brand-accent/5 px-6 py-12 md:py-16"
         >
-          <p className="text-[10px] uppercase tracking-[0.25em] text-brand-light font-semibold mb-4">
+          <p className="text-[10px] uppercase tracking-[0.25em] text-brand-light font-semibold mb-10 text-center">
             The flywheel
           </p>
-          <div className="grid md:grid-cols-3 gap-6 text-sm">
-            <div>
-              <p className="text-white font-semibold mb-1">1. Habit</p>
-              <p className="text-brand-subtle leading-relaxed">
-                Short-form audio earns daily, unthinking ear time.
-              </p>
-            </div>
-            <div>
-              <p className="text-white font-semibold mb-1">2. Signal</p>
-              <p className="text-brand-subtle leading-relaxed">
-                Every skip, like, and dive-deeper becomes context-conditioned
-                preference data.
-              </p>
-            </div>
-            <div>
-              <p className="text-white font-semibold mb-1">3. Companion</p>
-              <p className="text-brand-subtle leading-relaxed">
-                The dataset powers the ambient AI that no model can cold-start.
-              </p>
-            </div>
-          </div>
+          <FlywheelDiagram
+            nodes={[
+              { label: "Habit", sub: "daily ear time" },
+              { label: "Signal", sub: "preference data" },
+              { label: "Companion", sub: "ambient AI" },
+            ]}
+          />
         </motion.div>
       </div>
     </section>

@@ -9,7 +9,7 @@ const BLOCKERS = [
     name: "ElevenLabs",
     line: "Going B2C cannibalizes their paying customers.",
     detail:
-      "They sell API infrastructure. Going direct-to-consumer requires muscles they have never built. Twilio, Stripe, and Algolia all tried. None succeeded.",
+      "They sell API infrastructure. Going B2C requires muscles they've never built — Twilio, Stripe, and Algolia all tried and failed.",
   },
   {
     name: "Anthropic / OpenAI",

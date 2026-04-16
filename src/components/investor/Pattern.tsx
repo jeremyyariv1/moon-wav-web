@@ -7,12 +7,16 @@ import SectionTag from "@/components/shared/SectionTag";
 const CASES = [
   {
     name: "TikTok",
+    year: "2016",
+    tag: "algorithmic feed",
     claim: "Reels and Shorts are software-equivalent.",
     detail:
       "Meta and Google have more engineers and more capital. They still lose, because TikTok's For You algorithm is trained on swipe data that didn't exist before TikTok built the habit to generate it.",
   },
   {
     name: "Netflix",
+    year: "2007",
+    tag: "viewing history",
     claim: "Disney and Warner own better IP and more money.",
     detail:
       "Netflix wins recommendations because it has fifteen years of viewing data nobody else has. IP is content. Data is the product.",
@@ -44,22 +48,30 @@ export default function Pattern() {
           We&apos;ve seen this shape before.
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {CASES.map(({ name, claim, detail }, i) => (
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+          {CASES.map(({ name, year, tag, claim, detail }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-              className="rounded-2xl border border-brand-border bg-brand-card/50 p-8"
+              transition={{ duration: 0.7, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              className="border-l border-brand-border pl-6 md:pl-8"
             >
-              <p className="text-[11px] uppercase tracking-[0.2em] text-brand-light font-semibold mb-4">
-                {name}
+              <p className="text-[10px] uppercase tracking-[0.28em] text-brand-muted mb-3">
+                {year} · {tag}
               </p>
-              <p className="text-white text-xl font-semibold leading-snug mb-4">
+              <h3
+                className="text-6xl md:text-8xl italic font-bold text-white mb-6 leading-[0.9] tracking-tight"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                {name}
+              </h3>
+              <p className="text-white text-lg md:text-xl font-semibold leading-snug mb-3 max-w-md">
                 {claim}
               </p>
-              <p className="text-brand-subtle leading-relaxed">{detail}</p>
+              <p className="text-brand-subtle text-sm leading-relaxed max-w-md">
+                {detail}
+              </p>
             </motion.div>
           ))}
         </div>

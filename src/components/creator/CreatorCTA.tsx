@@ -39,15 +39,15 @@ export default function CreatorCTA() {
         transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 text-5xl md:text-7xl lg:text-[5rem] font-bold tracking-tight leading-[1.02] text-white text-center max-w-4xl"
       >
-        Your show is great.
+        You built the show.
         <br />
         <span
           className="italic font-bold"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          Now make sure people{" "}
+          Now build{" "}
           <span className="bg-gradient-to-r from-brand-light via-brand-accent to-violet-300 bg-clip-text text-transparent">
-            hear it.
+            the audience.
           </span>
         </span>
       </motion.h2>
@@ -60,8 +60,7 @@ export default function CreatorCTA() {
         className="relative z-10 mt-12 max-w-xl text-center text-brand-subtle text-lg md:text-xl leading-relaxed italic"
         style={{ fontFamily: "Georgia, serif" }}
       >
-        You&apos;ve been told for a decade discovery doesn&apos;t exist. Today
-        it does.
+        The first cohort starts now.
       </motion.p>
 
       <motion.a

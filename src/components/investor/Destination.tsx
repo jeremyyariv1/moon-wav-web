@@ -37,11 +37,10 @@ export default function Destination() {
           className="text-lg text-brand-subtle leading-relaxed max-w-2xl"
         >
           <p>
-            Foundation labs are solving model quality and voice quality with
-            billions of dollars. The real bottleneck is the missing daily habit
-            — ambient, personalized, interruptible audio in your ear. Spotify
-            trained the world on music. Podcasts trained it on long-form. Nobody
-            has trained it on this.
+            Foundation labs are solving model quality with billions. The
+            bottleneck is the missing daily habit — ambient, personalized,
+            interruptible audio. Spotify trained the world on music. Podcasts
+            trained it on long-form. Nobody has trained it on this.
           </p>
         </motion.div>
 
@@ -52,7 +51,7 @@ export default function Destination() {
           className="mt-14 pl-6 border-l-2 border-brand-primary text-2xl md:text-3xl italic text-white leading-snug max-w-2xl"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          We are building the habit. The habit is the wedge to everything downstream.
+          We are building the habit. The habit is the wedge.
         </motion.blockquote>
       </div>
     </section>

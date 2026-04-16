@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import MurmurationField from "@/components/shared/MurmurationField";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -13,6 +14,7 @@ export default function InvestorHero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-primary/8 rounded-full blur-[140px] pointer-events-none" />
+      <MurmurationField />
 
       {/* Top bar */}
       <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 py-5">
@@ -53,7 +55,7 @@ export default function InvestorHero() {
           className="text-xl md:text-2xl italic text-brand-subtle max-w-2xl leading-relaxed"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          Building the daily habit that makes the in-ear AI companion inevitable.
+          Building the daily habit that makes the in-ear AI companion possible.
         </motion.p>
 
       </div>

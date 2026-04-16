@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionTag from "@/components/shared/SectionTag";
+import PhoneOutline from "@/components/shared/PhoneOutline";
 
 const SIGNALS = [
   { label: "Like", desc: "More like this." },
@@ -14,15 +15,15 @@ const SIGNALS = [
 const SOURCES = [
   {
     name: "AI-generated explainers",
-    desc: "Wikipedia facts, news, Reddit digests synthesized into natural audio. Infinite supply, generated for cents.",
+    desc: "Wikipedia, news, Reddit digests. Infinite supply, cents to generate.",
   },
   {
     name: "Creator clips",
-    desc: "Podcasters and musicians upload 60–90 second clips. Algorithmic distribution to cold ears.",
+    desc: "Podcasters upload 60–90s clips. Algorithmic distribution.",
   },
   {
     name: "Personalized briefing",
-    desc: "Weather, calendar, overnight headlines, on-this-day. The bridge to assistant.",
+    desc: "Weather, calendar, headlines. The bridge to assistant.",
   },
 ];
 
@@ -56,23 +57,27 @@ export default function Product() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white mb-10 max-w-3xl"
         >
-          Press play. Audio flows. The feed shapes itself.
+          Press play. The feed runs.
         </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg text-brand-subtle leading-relaxed max-w-2xl mb-16"
-        >
-          <p>
-            No scrolling. No choosing. Hit play and a continuous stream of
-            20-second to 5-minute clips unfolds — tuned to interests, time of
-            day, and what just got reacted to. Four buttons shape the feed.
-            Every tap becomes preference signal: context-conditioned, behavioral,
-            ours.
-          </p>
-        </motion.div>
+        {/* Asymmetric: prose left, phone mockup right */}
+        <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-start mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg text-brand-subtle leading-relaxed max-w-2xl"
+          >
+            <p>
+              Hit play. A continuous stream of 20-second to 5-minute clips,
+              tuned to interests and time of day. Four buttons shape the feed.
+              Every tap is preference signal.
+            </p>
+          </motion.div>
+          <div className="w-full md:w-[280px]">
+            <PhoneOutline />
+          </div>
+        </div>
 
         {/* The four signals */}
         <motion.div
@@ -82,7 +87,7 @@ export default function Product() {
           className="mb-16"
         >
           <p className="text-[10px] uppercase tracking-[0.22em] text-brand-light font-semibold mb-5">
-            Four signals · the entire interaction surface
+            The four signals
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {SIGNALS.map(({ label, desc }, i) => (
@@ -164,8 +169,8 @@ export default function Product() {
           className="pl-6 border-l-2 border-brand-primary text-2xl md:text-3xl italic text-white leading-snug max-w-2xl"
           style={{ fontFamily: "Georgia, serif" }}
         >
-          The simplest interface that could plausibly produce a behavioral dataset
-          this rich.
+          The simplest interface that could produce a behavioral dataset this
+          specific.
         </motion.blockquote>
       </div>
     </section>
